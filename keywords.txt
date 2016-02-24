@@ -1,0 +1,34 @@
+#######################################
+# Syntax Coloring Map For bq34z100
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+writeConfig	KEYWORD2
+getSOC	KEYWORD2
+getTemp	KEYWORD2
+getCapacity	KEYWORD2
+getVoltage	KEYWORD2
+getCurrent	KEYWORD2
+getFlags	KEYWORD2
+getRemaining	KEYWORD2
+readControl	KEYWORD2
+readInstantCurrent	KEYWORD2
+setup	KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+bq34z100	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
