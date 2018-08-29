@@ -1,8 +1,8 @@
 #ifndef BQ34ZGUARD_H
 #define BQ34ZGUARD_H
 #include <inttypes.h>
-#include "Wire.h"//include the wire libs
 #include "Arduino.h"
+#include "Wire.h"  // I2C library
 #include <math.h>  
 class bq34z100
 {
