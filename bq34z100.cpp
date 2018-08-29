@@ -4,13 +4,14 @@
  * By Ben V. Brown (Ralim@Ralimtek.com)
  */
 
+#include "bq34z100.h"
+
 extern "C" {
 #include <stdlib.h>
 #include <string.h>
 #include <inttypes.h>
 }
-
-#include "bq34z100.h"
+#include "Arduino.h"
 #define BQ34Z100 0x55
 uint8_t flashbytes[32] = {0};
 bq34z100::bq34z100()
