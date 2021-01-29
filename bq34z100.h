@@ -15,7 +15,7 @@ public:
     bq34z100();
     uint8_t getSOC();//gets the current state of charge %
     int getTemp();//returns the temperature in C
-    int getVoltage();//returns the battery voltage
+    uint16_t getVoltage();//returns the battery voltage
     int getCapacity();//returns the current battery capacity
     int getCurrent();//returns the current flowing atm
     int getStatus();//returns the flags
