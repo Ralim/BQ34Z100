@@ -74,6 +74,7 @@ int bq34z100::readControl(uint8_t add,uint8_t add2)
     return temp;
 
 }
+
 //lets you read the instantainious current
 int bq34z100::readInstantCurrent()
 {
@@ -90,7 +91,7 @@ uint8_t bq34z100::getSOC()
     return Read(0x02, 2) ; //return temp in x10 format
 }
 
-int bq34z100::getVoltage()
+uint16_t bq34z100::getVoltage()
 {
     return Read(0x08, 2) ; //return temp in x10 format
 }
@@ -113,7 +114,19 @@ int bq34z100::getStatus()
 }
 int bq34z100::getFlags()
 {
-    return readControl(0x0E,0x0F);
+    Wire.beginTransmission(BQ34Z100);
+    Wire.write(0x0F);
+    Wire.write(0x0E);
+    Wire.write(0x0E);
+    Wire.endTransmission();
+
+    Wire.beginTransmission(BQ34Z100);
+    Wire.write(0x0E);
+    Wire.endTransmission();
+    Wire.requestFrom(BQ34Z100, 2);
+    int16_t temp = Wire.read();
+    temp = temp | (Wire.read() << 8);
+    return temp;
 }
 void bq34z100::reset()
 {
